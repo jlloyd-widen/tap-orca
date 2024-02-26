@@ -64,3 +64,7 @@ class OrcaStream(GraphQLStream):
             A paginator instance.
         """
         return BaseOffsetPaginator(0, self.page_size)
+
+    def post_process(self, row: dict, context: dict) -> dict:
+        """Post-process the record before writing it."""
+        return {k: str(v) for k, v in row.items()}

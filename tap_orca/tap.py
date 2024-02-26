@@ -104,17 +104,18 @@ class TapOrca(Tap):
             schema.append(
                 th.Property(
                     key,
-                    th.CustomType(jsonschema_type_dict={
-                        "anyOf": [
-                            {"type": "null"},
-                            {"type": "object"},
-                            {"type": "array"},
-                            {"type": "string"},
-                            {"type": "number"},
-                            # {"type": "boolean"},  # causes all values to be a boolean
-                            {"type": "integer"},
-                        ]
-                    })
+                    th.StringType(),
+                    # th.CustomType(jsonschema_type_dict={
+                    #     "anyOf": [
+                    #         {"type": "null"},
+                    #         {"type": "object"},
+                    #         {"type": "array"},
+                    #         {"type": "string"},
+                    #         {"type": "number"},
+                    #         # {"type": "boolean"},  # causes all values to be a boolean
+                    #         {"type": "integer"},
+                    #     ]
+                    # })
                 ),
             )
         self.logger.info("Schema discovery complete.")

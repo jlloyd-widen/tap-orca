@@ -23,7 +23,7 @@ class DynamicOrcaStream(OrcaStream):
         name: str,
         query: dict | str,
         schema: dict,
-        primary_keys: t.ClassVar[list[str]] = ["id"],
+        primary_keys: t.ClassVar[list[str]] = [],
         replication_key=None,
         **kwargs
     ):
@@ -32,6 +32,7 @@ class DynamicOrcaStream(OrcaStream):
         self.custom_query = query
         self.primary_keys = primary_keys
         self.replication_key = replication_key
+        self.primary_keys = primary_keys
 
     @property
     def query(self) -> dict:

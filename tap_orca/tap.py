@@ -27,6 +27,12 @@ class TapOrca(Tap):
             required=True,
             description="The query to run against the API."
         ),
+        th.Property(
+            "primary_keys",
+            th.ArrayType(th.StringType),
+            required=False,
+            description="The primary keys for the custom stream."
+        )
     )
 
     config_jsonschema = th.PropertiesList(
@@ -58,6 +64,7 @@ class TapOrca(Tap):
                 name=custom_stream.get("name"),
                 query=custom_stream.get("query"),
                 schema=self.discover_schema(custom_stream.get("query")),
+                primary_keys=custom_stream.get("primary_keys"),
             ))
         return streams
 

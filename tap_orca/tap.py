@@ -107,12 +107,12 @@ class TapOrca(Tap):
                     th.CustomType(jsonschema_type_dict={
                         "anyOf": [
                             {"type": "null"},
-                            # {"type": "object"},
-                            # {"type": "array"},
+                            {"type": "object"},
+                            {"type": "array"},
                             {"type": "string"},
-                            # {"type": "number"},
+                            {"type": "number"},
                             # {"type": "boolean"},  # causes all values to be a boolean
-                            # {"type": "integer"},
+                            {"type": "integer"},
                         ]
                     })
                 ),

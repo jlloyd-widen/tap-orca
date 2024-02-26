@@ -32,7 +32,13 @@ class TapOrca(Tap):
             th.ArrayType(th.StringType),
             required=False,
             description="The primary keys for the custom stream."
-        )
+        ),
+        th.Property(
+            "schema",
+            th.ArrayType(th.StringType),
+            required=False,
+            description="A simple schema for the custom stream."
+        ),
     )
 
     config_jsonschema = th.PropertiesList(
@@ -101,17 +107,17 @@ class TapOrca(Tap):
                     th.CustomType(jsonschema_type_dict={
                         "anyOf": [
                             {"type": "null"},
-                            {"type": "object"},
-                            {"type": "array"},
+                            # {"type": "object"},
+                            # {"type": "array"},
                             {"type": "string"},
-                            {"type": "number"},
+                            # {"type": "number"},
                             # {"type": "boolean"},  # causes all values to be a boolean
-                            {"type": "integer"},
+                            # {"type": "integer"},
                         ]
                     })
                 ),
             )
-
+        self.logger.info("Schema discovery complete.")
         return schema.to_dict()
 
 

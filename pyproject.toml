@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "acquia-tap-orca"
-version = "0.0.1"
+version = "0.0.2"
 description = "`tap-orca` is a Singer tap for Orca, built with the Meltano Singer SDK."
 readme = "README.md"
 authors = ["Josh Lloyd <josh.lloyd@acquia.com>"]

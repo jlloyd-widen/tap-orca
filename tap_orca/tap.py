@@ -97,27 +97,28 @@ class TapOrca(Tap):
         prepared_request = stream.prepare_request({}, next_page_token=0)
         resp = decorated_request(prepared_request, {})
         records = iter(stream.parse_response(resp))
-        first_record = next(records)
+        first_record = next(records, None)
 
         # accept any type for each key in the first record
-        for key in first_record.keys():
-            schema.append(
-                th.Property(
-                    key,
-                    th.StringType(),
-                    # th.CustomType(jsonschema_type_dict={
-                    #     "anyOf": [
-                    #         {"type": "null"},
-                    #         {"type": "object"},
-                    #         {"type": "array"},
-                    #         {"type": "string"},
-                    #         {"type": "number"},
-                    #         # {"type": "boolean"},  # causes all values to be a boolean
-                    #         {"type": "integer"},
-                    #     ]
-                    # })
-                ),
-            )
+        if first_record:
+            for key in first_record.keys():
+                schema.append(
+                    th.Property(
+                        key,
+                        th.StringType(),
+                        # th.CustomType(jsonschema_type_dict={
+                        #     "anyOf": [
+                        #         {"type": "null"},
+                        #         {"type": "object"},
+                        #         {"type": "array"},
+                        #         {"type": "string"},
+                        #         {"type": "number"},
+                        #         # {"type": "boolean"},  # causes all values to be a boolean
+                        #         {"type": "integer"},
+                        #     ]
+                        # })
+                    ),
+                )
         self.logger.info("Schema discovery complete.")
         return schema.to_dict()
 

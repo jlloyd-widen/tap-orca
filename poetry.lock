@@ -555,13 +555,13 @@ testing = ["flufl.flake8", "importlib-resources (>=1.3)", "packaging", "pyfakefs
 
 [[package]]
 name = "importlib-resources"
-version = "6.1.1"
+version = "6.1.2"
 description = "Read resources from Python packages"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "importlib_resources-6.1.1-py3-none-any.whl", hash = "sha256:e8bf90d8213b486f428c9c39714b920041cb02c184686a3dee24905aaa8105d6"},
-    {file = "importlib_resources-6.1.1.tar.gz", hash = "sha256:3893a00122eafde6894c59914446a512f728a0c1a45f9bb9b63721b6bacf0b4a"},
+    {file = "importlib_resources-6.1.2-py3-none-any.whl", hash = "sha256:9a0a862501dc38b68adebc82970140c9e4209fc99601782925178f8386339938"},
+    {file = "importlib_resources-6.1.2.tar.gz", hash = "sha256:308abf8474e2dba5f867d279237cd4076482c3de7104a40b41426370e891549b"},
 ]
 
 [package.dependencies]
@@ -569,7 +569,7 @@ zipp = {version = ">=3.1.0", markers = "python_version < \"3.10\""}
 
 [package.extras]
 docs = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "rst.linker (>=1.9)", "sphinx (<7.2.5)", "sphinx (>=3.5)", "sphinx-lint"]
-testing = ["pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-mypy (>=0.9.1)", "pytest-ruff", "zipp (>=3.17)"]
+testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-mypy", "pytest-ruff (>=0.2.1)", "zipp (>=3.17)"]
 
 [[package]]
 name = "inflection"
@@ -846,13 +846,13 @@ tests = ["coverage[toml] (==5.0.4)", "pytest (>=6.0.0,<7.0.0)"]
 
 [[package]]
 name = "pytest"
-version = "8.0.1"
+version = "8.0.2"
 description = "pytest: simple powerful testing with Python"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "pytest-8.0.1-py3-none-any.whl", hash = "sha256:3e4f16fe1c0a9dc9d9389161c127c3edc5d810c38d6793042fb81d9f48a59fca"},
-    {file = "pytest-8.0.1.tar.gz", hash = "sha256:267f6563751877d772019b13aacbe4e860d73fe8f651f28112e9ac37de7513ae"},
+    {file = "pytest-8.0.2-py3-none-any.whl", hash = "sha256:edfaaef32ce5172d5466b5127b42e0d6d35ebbe4453f0e3505d96afd93f6b096"},
+    {file = "pytest-8.0.2.tar.gz", hash = "sha256:d4051d623a2e0b7e51960ba963193b09ce6daeb9759a451844a21e4ddedfc1bd"},
 ]
 
 [package.dependencies]
@@ -1265,13 +1265,13 @@ files = [
 
 [[package]]
 name = "singer-sdk"
-version = "0.35.2"
+version = "0.36.0"
 description = "A framework for building Singer taps"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "singer_sdk-0.35.2-py3-none-any.whl", hash = "sha256:771c7e0b9a4da0e193f5bd4a5b79bf33f6783f189c6fc13aaa38c18663e90afd"},
-    {file = "singer_sdk-0.35.2.tar.gz", hash = "sha256:e8763759660baa4636f2956532227f924a303ce1ff2f40ca92acc910e516f793"},
+    {file = "singer_sdk-0.36.0-py3-none-any.whl", hash = "sha256:9d1f251b74194bc413f9340404e8f0cf4c214cbf2bca2f6b170e509ce963911f"},
+    {file = "singer_sdk-0.36.0.tar.gz", hash = "sha256:6268f200581b728552e211a695e3a1ee489c6c0b10d0fd845605303ac05a25f2"},
 ]
 
 [package.dependencies]
@@ -1477,4 +1477,4 @@ s3 = ["fs-s3fs"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8"
-content-hash = "d702cdd451f8a07ef87850fab6a064be190999408ed390416ef5fc7d66d425b3"
+content-hash = "9b831535b5e24925010998db8cc16f53671a7cb687bf0b5814632d867281aa09"
